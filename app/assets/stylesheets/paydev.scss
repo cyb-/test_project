@@ -1,0 +1,32 @@
+body {
+	padding-top: $navbar-height;
+
+	.container > .exception {
+		
+	}
+}
+
+.navbar {
+	margin-bottom: 0;
+
+	.navbar-brand {
+		font-family: 'Pacifico', cursive;
+		font-size: $font-size-large * 1.25;
+	}
+}
+
+@media only screen and (min-width : $screen-xs-min) {
+
+}
+
+@media only screen and (min-width : $screen-sm-min) {
+
+}
+
+@media only screen and (min-width : $screen-md-min) {
+
+}
+
+@media only screen and (min-width : $screen-lg-min) {
+
+}

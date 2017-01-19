@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_for :users, path:               "account",
+                     skip:               [:invitations],
+                     controllers:        { registrations: :registrations }
+  devise_scope :user do
+    get     "account/invitation/accept", to: "devise/invitations#edit",   as: :accept_user_invitation
+    match   "account/invitation",        to: "devise/invitations#update", as: :user_invitation, via: [:patch, :put]
+  end
 end

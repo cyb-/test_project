@@ -11,7 +11,7 @@ Using **Ruby 2.3.1** and **Rails 5.0.1**
 
 ## Installation
 
-    git clone git@github.com:cyb-/PayDev.git && cd PayDev
+    git clone git@github.com:cyb-/test_project.git && cd test_project
     bundle install
 
 

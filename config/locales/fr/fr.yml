@@ -1,2 +1,12 @@
 fr:
-  hello: "Bonjour tout le monde !"
+  hello: "Achetez ou vendez votre développeur d'occasion !"
+  actions:
+    create: "Créer"
+    edit: "Modifier"
+    destroy: "Supprimer"
+    invite_user: "Inviter un nouvel utilisateur"
+    update_role: "Modifier le rôle"
+  flashes:
+    created: "Ce(tte) %{model} a été créé(e) avec succès."
+    updated: "Ce(tte) %{model} a été modifié(e) avec succès."
+    destroyed: "Ce(tte) %{model} a été supprimé(e) avec succès."

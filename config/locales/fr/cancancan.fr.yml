@@ -1,0 +1,19 @@
+fr:
+  unauthorized:
+    manage:
+      all: "Vous n'êtes pas autorisé à accéder à cette page."
+      user: "Vous ne pouvez pas accéder aux utilisateurs."
+    read:
+      all: "Vous ne pouvez pas voir ce type de ressource."
+      user: "Vous ne pouvez pas voir cet utilisateur."
+    create:
+      all: "Vous ne pouvez pas créer ce type de ressource."
+      user: "Vous ne pouvez pas créer d'utilisateur."
+    update:
+      all: "Vous ne pouvez pas modifier cette ressource."
+      user: "Vous ne pouvez pas modifier cet utilisateur."
+    destroy:
+      all: "Vous ne pouvez pas supprimer cette ressource."
+      user: "Vous ne pouvez pas supprimer cet utilisateur."
+    update_role:
+      user: "Vous ne pouvez pas modifier le rôle de cet utilisateur."

@@ -1,0 +1,20 @@
+fr:
+  activerecord:
+    models:
+      user: Utilisateur
+    attributes:
+      email: "Courriel"
+      name: "Nom"
+      first_name: "Prénom"
+      last_name: "Nom"
+      role: "Rôle"
+      created_at: "Crée le"
+      confirmed_at: "Confirmé(e) le"
+      updated_at: "Modifié(e) le"
+      confirmation_sent_at: "Confirmation envoyée le"
+      sign_in_count: "Nombre de connexions"
+      last_sign_in_at: "Dernière connexion le"
+      invited_by: "Invité(e) par"
+      invitation_created_at: "Invitation crée le"
+      invitation_sent_at: "Invitation envoyée le"
+      invitation_accepted_at: "Invitation acceptée le"

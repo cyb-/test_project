@@ -1,5 +1,9 @@
 fr:
   devise:
+    registrations:
+      my_account: "Mon compte"
+    sessions:
+      sign_out: "Déconnexion"
     failure:
       invited: "Vous avez une invitation en attente, acceptez-la pour terminer la création de votre compte."
     invitations:

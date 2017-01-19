@@ -7,3 +7,8 @@ fr:
       mark: '*'
     error_notification:
       default_message: "Veuillez corriger les problèmes suivants:"
+    labels:
+      defaults:
+        first_name: "Prénom"
+        last_name: "Nom"
+        role: "Rôle"

@@ -1,2 +1,12 @@
 en:
-  hello: "Hello world !"
+  hello: "Sell or buy your used developper !"
+  actions:
+    create: "Create"
+    edit: "Edit"
+    destroy: "Destroy"
+    invite_user: "Invite new user"
+    update_role: "Update role"
+  flashes:
+    created: "%{model} was successfully created."
+    updated: "%{model} was successfully updated."
+    destroyed: "%{model} was successfully destroyed."

@@ -1,0 +1,19 @@
+fr:
+  unauthorized:
+    manage:
+      all: "You are not authorized to access this page."
+      user: "You have no access to users."
+    read:
+      all: "You have no access to read this resource."
+      user: "You have no access to read this user."
+    create:
+      all: "You have no access to create this resource."
+      user: "You have no access to create user."
+    update:
+      all: "You have no access to edit this resource."
+      user: "You have no access to edit this user."
+    destroy:
+      all: "You have no access to delete this resource."
+      user: "You have no access to delete this user."
+    update_role:
+      user: "You can not edit this user's role."

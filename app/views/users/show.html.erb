@@ -1,0 +1,20 @@
+<h2><%= @user.name %> <span class="label label-info"><%= @user.role %></span></h2>
+
+<div class="datas-grid">
+
+  <%= render partial: 'show_attribute', locals: { user: @user, attribute: :email } %>
+
+  <% [:invited_by, :invitation_created_at, :invitation_sent_at].each do |attribute_name| %>
+    <%= render partial: 'show_attribute', locals: { user: @user, attribute: attribute_name } %>
+  <% end unless @user.invited_by.nil? %>
+
+  <% [:sign_in_count, :last_sign_in_at, :updated_at, :created_at].each do |attribute_name| %>
+    <%= render partial: 'show_attribute', locals: { user: @user, attribute: attribute_name } %>
+  <% end if can? :manage, @user %>
+
+</div>
+
+<div class="btn-group btn-group-lg btn-group-user">
+  <%= link_to t("actions.edit"), edit_user_path(@user), id: 'edit-user-link', class: 'btn btn-primary' if can? :update, @user %>
+  <%= link_to t("actions.destroy"), @user, method: :delete, id: 'destroy-user-link', class: 'btn btn-danger' if can? :destroy, @user %>
+</div>

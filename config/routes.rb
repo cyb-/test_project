@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  resources :users do
+    member do
+      get   :edit_role,                  constraints: { format: :js }
+      match :update_role,                via: [:patch, :put]
+    end
+  end
+
   devise_for :users, path:               "account",
                      skip:               [:invitations],
                      controllers:        { registrations: :registrations }

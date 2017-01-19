@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-3">
+    <div class="attribute-name">
+      <%= t "activerecord.attributes.#{attribute.to_s}" %>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <div class="attribute-value">
+
+      <% if attribute == :email %>
+        <%= mail_to user.send(attribute) %>
+      <% elsif user.send(attribute).is_a?(User) %>
+        <%= link_to user.send(attribute).name, user.send(attribute)  %>
+      <% elsif user.send(attribute).is_a?(ActiveSupport::TimeWithZone) %>
+        <%= l user.send(attribute), format: :long %>
+      <% else %>
+        <%= user.send(attribute) %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

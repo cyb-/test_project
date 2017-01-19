@@ -88,7 +88,7 @@ GEM
       devise (>= 4.0.0)
     diff-lcs (1.2.5)
     erubis (2.7.0)
-    exception_handler (0.7.0)
+    exception_handler (0.7.5)
       bundler (~> 1.6)
       rails (>= 4.2.0)
       responders
@@ -283,4 +283,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.13.6
+   1.13.7

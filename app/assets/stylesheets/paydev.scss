@@ -1,30 +1,140 @@
-body {
-	padding-top: $navbar-height;
+html, body {
+  width: 100%;
+  height: 100%;
+}
 
-	.container > .exception {
-		
-	}
+body {
+  height: 100%;
+  padding-top: $navbar-height;
+
+  > .container {
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    > h2 {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .navbar {
-	margin-bottom: 0;
+  margin-bottom: 0;
 
-	.navbar-brand {
-		font-family: 'Pacifico', cursive;
-		font-size: $font-size-large * 1.25;
-	}
+  .navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: $font-size-large * 1.25;
+  }
+}
+
+.container-table {
+  width: 100%;
+  height: 100%;
+  display: table;
+
+  > .container-cell {
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+
+.table-responsive.table-users {
+  margin-top: 20px;
+
+  thead.thead-inverse {
+    background-color: $navbar-inverse-bg;
+    color: $navbar-inverse-color;
+  }
+
+  th.user-role, td.user-role {
+    max-width: 100px !important;
+  }
+
+  .btn-role {
+    width: 100%;
+  }
+}
+
+.datas-grid {
+  .attribute-name,
+  .attribute-value {
+    padding: 5px;
+  }
+  .attribute-name {
+    background-color: #ddd;
+  }
+}
+
+.form-actions {
+  text-align: center;
+
+  > button {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+.btn-devise {
+  display: block;
+  margin: 15px auto;
+}
+
+
+#home-content {
+  > h2 {
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+
+  > a {
+    display: block;
+  }
+}
+
+.show-inputs {
+  > .input-group {
+    margin-bottom: 15px;
+  }
+}
+
+.btn-group-user {
+  width: 100%;
+  display: block;
+  margin: 15px auto 0;
+
+  > .btn {
+    width: 50%;
+  }
 }
 
 @media only screen and (min-width : $screen-xs-min) {
-
+  #home-content {
+    > a {
+      max-width: 50%;
+      margin: 0 auto;
+    }
+  }
 }
 
 @media only screen and (min-width : $screen-sm-min) {
+  .btn-devise,
+  .form-actions > button {
+    width: 50%;
+  }
 
+  .btn-group-user {
+    width: 35%;
+  }
 }
 
 @media only screen and (min-width : $screen-md-min) {
-
+  #home-content {
+    > h2 {
+      font-size: $font-size-h1;
+    }
+  }
 }
 
 @media only screen and (min-width : $screen-lg-min) {

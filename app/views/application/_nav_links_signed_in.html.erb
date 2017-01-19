@@ -1,0 +1,3 @@
+<li><%= link_to t("activerecord.models.user").pluralize, users_url, id: 'users-nav-link', class: "users-nav" %></li>
+<li><%= link_to t("devise.registrations.my_account"), edit_user_registration_url, id: 'account-nav-link', class: "account-nav" %></li>
+<li><%= link_to t("devise.sessions.sign_out"), destroy_user_session_url, method: :delete, id: 'signout-nav-link', class: "signout-nav" %></li>

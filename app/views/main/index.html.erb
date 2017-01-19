@@ -1,0 +1,6 @@
+<div class="container-table">
+  <div class="container-cell" id="home-content">
+    <h2><%= t(:hello) %></h2>
+    <%= link_to t("devise.shared.links.sign_up"), new_user_registration_url, class: "btn btn-success btn-lg" unless user_signed_in? %>
+  </div>
+</div>

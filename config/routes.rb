@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root      "main#index"
+
   resources :users do
     member do
       get   :edit_role,                  constraints: { format: :js }

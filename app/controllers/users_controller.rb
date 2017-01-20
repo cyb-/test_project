@@ -18,9 +18,13 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.created_by_admin!(current_user)
+    @user.created_by_admin!
+    @user.skip_confirmation!
+    user_created = @user.save
+    @user.invite!(current_user) if user_created
+
     respond_to do |format|
-      if @user.save
+      if user_created
         format.html { redirect_to @user, success: t("flashes.created", model: t("activerecord.models.user")) }
         format.json { render :show, status: :created, location: user_url(@user) }
       else

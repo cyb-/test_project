@@ -4,8 +4,8 @@ class User < ApplicationRecord
 
   enum role: [:user, :admin]
 
-  validates	  :first_name,  presence: true
-  validates	  :last_name,   presence: true
+  validates	:first_name,  presence: true
+  validates	:last_name,   presence: true
 
   before_save	:admin_role_for_first_created_user!, if: lambda { User.count < 1 }
   before_save	:format_first_name_attribute!, :format_last_name_attribute!
@@ -14,17 +14,11 @@ class User < ApplicationRecord
     @created_by_admin = false
   end
 
-  after_create do
-    self.invite!(invited_by) unless invited_by.nil?
-  end
-
   def name
     "#{first_name} #{last_name}"
   end
 
-  def created_by_admin!(creator)
-    skip_confirmation!
-    self.invited_by = creator
+  def created_by_admin!
     @created_by_admin = true
   end
 

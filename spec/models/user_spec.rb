@@ -81,10 +81,21 @@ RSpec.describe User, type: :model do
   end
 
   describe "created by admin" do
+    let(:admin) do
+      FactoryGirl.create(:user, :admin, email: Faker::Internet.email)
+    end
+
+    before(:each) do
+      subject.created_by_admin!(admin)
+    end
+
     it "should be valid without password" do
-      subject.created_by_admin!
       subject.password = ''
       expect(subject).to be_valid
+    end
+
+    it "has invited_by attribute" do
+      expect(subject.invited_by).to eq(admin)
     end
   end
 end

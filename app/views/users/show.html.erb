@@ -16,5 +16,5 @@
 
 <div class="btn-group btn-group-lg btn-group-user">
   <%= link_to t("actions.edit"), edit_user_path(@user), id: 'edit-user-link', class: 'btn btn-primary' if can? :update, @user %>
-  <%= link_to t("actions.destroy"), @user, method: :delete, id: 'destroy-user-link', class: 'btn btn-danger' if can? :destroy, @user %>
+  <%= link_to t("actions.destroy"), @user, method: :delete, data: { confirm: t("devise.registrations.edit.are_you_sure") }, id: 'destroy-user-link', class: 'btn btn-danger' if can? :destroy, @user %>
 </div>

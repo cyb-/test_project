@@ -23,6 +23,13 @@ RSpec.describe "User management", type: :feature do
         expect(page).to have_link(I18n.t("actions.invite_user"), href: new_user_path)
         expect(page).to have_css("a#link-role-modal-#{user.id}")
       end
+      
+      scenario "click on edit role link should open modal", js: true do
+        user
+        visit users_path
+        click_link(id: "link-role-modal-#{user.id}")
+        expect(page).to have_css("div#modal-role-#{user.id}")
+      end
     end
 
     describe "show user page" do
@@ -69,9 +76,12 @@ RSpec.describe "User management", type: :feature do
       end
     end
 
-    scenario "destroy user" do
+    scenario "destroy user", js: true do
       visit user_path(user)
       click_link I18n.t("actions.destroy")
+      a = page.driver.browser.switch_to.alert
+      expect(a.text).to eq(I18n.t("devise.registrations.edit.are_you_sure"))
+      a.accept
       expect(page).to have_content(I18n.t("flashes.destroyed", model: I18n.t("activerecord.models.user")))
     end
   end

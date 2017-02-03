@@ -86,9 +86,12 @@ RSpec.feature Devise, type: :feature do
       sign_in(user, scope: :user)
     end
 
-    scenario "user can delete own account" do
+    scenario "user can delete own account", js: true do
       visit edit_user_registration_path
       click_link I18n.t("devise.registrations.edit.cancel_my_account")
+      a = page.driver.browser.switch_to.alert
+      expect(a.text).to eq(I18n.t("devise.registrations.edit.are_you_sure"))
+      a.accept
       expect(page).to have_content I18n.t("devise.registrations.destroyed")
     end
   end

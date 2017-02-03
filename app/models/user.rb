@@ -19,6 +19,7 @@ class User < ApplicationRecord
   end
 
   def created_by_admin!
+    self.skip_confirmation!
     @created_by_admin = true
   end
 

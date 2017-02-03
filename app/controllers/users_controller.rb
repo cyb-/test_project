@@ -19,9 +19,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.created_by_admin!
-    @user.skip_confirmation!
-    user_created = @user.save
-    @user.invite!(current_user) if user_created
+    # @user.skip_confirmation!
+    # user_created = @user.save
+    @user.invite!(current_user) if user_created = @user.save
 
     respond_to do |format|
       if user_created

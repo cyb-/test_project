@@ -26,6 +26,7 @@ You need your postfix configured to send emails.
 ### Test
 
 **You need to install `geckodriver` in your path to run selenium-webdrier**
+Uncomment line 2 in ``specs/support/capybara.rb`` to run all feature specs with selenium
 
 
     bundle exec rake spec

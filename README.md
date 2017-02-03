@@ -3,6 +3,7 @@
 Using **Ruby 2.3.1** and **Rails 5.0.1**
 
 **Only configured for development and test environments !!**
+
 You need your postfix configured to send emails.
 
   * Devise for authentication
@@ -26,6 +27,7 @@ You need your postfix configured to send emails.
 ### Test
 
 **You need to install `geckodriver` in your path to run selenium-webdrier**
+
 Uncomment line 2 in ``specs/support/capybara.rb`` to run all feature specs with selenium
 
 
